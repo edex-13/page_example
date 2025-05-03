@@ -9,20 +9,20 @@ interface FeatureCardProps {
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => (
-  <div className="bg-powble-white p-6 rounded-lg shadow-lg border border-powble-lightGray transition-all duration-300 hover:shadow-xl">
-    <div className="bg-powble-black text-powble-white p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+  <div className="bg-powble-black p-6 rounded-lg shadow-lg border border-powble-darkGray transition-all duration-300 hover:shadow-xl">
+    <div className="bg-powble-white text-powble-black p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
       {icon}
     </div>
-    <h3 className="text-xl font-bold mb-3">{title}</h3>
+    <h3 className="text-xl font-bold mb-3 text-powble-white">{title}</h3>
     <p className="text-powble-darkGray">{description}</p>
   </div>
 );
 
 const Features: React.FC = () => {
   return (
-    <section id="features" className="py-16 md:py-24 bg-powble-lightGray">
+    <section id="features" className="py-16 md:py-24 bg-powble-darkGray">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-powble-white">
           Access to Novel AI Tools
         </h2>
         

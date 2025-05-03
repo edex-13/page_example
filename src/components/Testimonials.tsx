@@ -10,10 +10,10 @@ interface TestimonialProps {
 }
 
 const Testimonial: React.FC<TestimonialProps> = ({ quote, author, company, delay = 0 }) => (
-  <Card className={`border border-powble-lightGray shadow-md hover:shadow-lg transition-all duration-300 animate-reveal`} style={{animationDelay: `${delay}ms`}}>
+  <Card className={`border border-powble-darkGray shadow-md hover:shadow-lg transition-all duration-300 animate-reveal bg-powble-black`} style={{animationDelay: `${delay}ms`}}>
     <CardContent className="p-6">
-      <p className="text-powble-darkGray mb-6 italic">"{quote}"</p>
-      <div className="font-semibold">{author}</div>
+      <p className="text-powble-white mb-6 italic">"{quote}"</p>
+      <div className="font-semibold text-powble-white">{author}</div>
       <div className="text-sm text-powble-darkGray">{company}</div>
     </CardContent>
   </Card>
@@ -21,12 +21,12 @@ const Testimonial: React.FC<TestimonialProps> = ({ quote, author, company, delay
 
 const Testimonials: React.FC = () => {
   return (
-    <section id="testimonials" className="py-16 md:py-24 bg-powble-lightGray">
+    <section id="testimonials" className="py-16 md:py-24 bg-powble-darkGray">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-powble-white">
           Community Impressions
         </h2>
-        <p className="text-powble-darkGray text-center max-w-2xl mx-auto mb-12">
+        <p className="text-powble-white text-center max-w-2xl mx-auto mb-12">
           See what our clients have to say about how Powble has transformed their power system design process.
         </p>
         

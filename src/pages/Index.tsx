@@ -31,7 +31,7 @@ const Index: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-powble-white">
+    <div className="min-h-screen bg-powble-black">
       <Navbar />
       <main>
         <Hero />

@@ -8,17 +8,17 @@ interface MetricCardProps {
 }
 
 const MetricCard: React.FC<MetricCardProps> = ({ value, label, suffix = "" }) => (
-  <div className="bg-powble-black text-powble-white p-8 rounded-lg text-center transform transition-transform duration-300 hover:scale-105">
+  <div className="bg-powble-white text-powble-black p-8 rounded-lg text-center transform transition-transform duration-300 hover:scale-105">
     <div className="text-4xl md:text-5xl font-bold mb-2">{value}{suffix}</div>
-    <div className="text-powble-lightGray font-medium uppercase tracking-wider">{label}</div>
+    <div className="text-powble-darkGray font-medium uppercase tracking-wider">{label}</div>
   </div>
 );
 
 const Metrics: React.FC = () => {
   return (
-    <section id="metrics" className="py-16 md:py-24 bg-powble-white">
+    <section id="metrics" className="py-16 md:py-24 bg-powble-black">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-powble-white">
           Our Impact in Numbers
         </h2>
         

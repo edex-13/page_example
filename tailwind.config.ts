@@ -54,10 +54,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				powble: {
-					black: '#000000',
-					white: '#FFFFFF',
-					darkGray: '#222222',
-					lightGray: '#F1F1F1'
+					black: '#FFFFFF',  // Inverted from black to white
+					white: '#000000',  // Inverted from white to black
+					darkGray: '#DDDDDD',  // Inverted from dark gray to light gray
+					lightGray: '#222222'  // Inverted from light gray to dark gray
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
