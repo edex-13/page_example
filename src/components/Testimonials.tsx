@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Carousel, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
+import { CarouselContent } from './ui/carousel';
 
 interface TestimonialProps {
   quote: string;
@@ -10,7 +12,7 @@ interface TestimonialProps {
 }
 
 const Testimonial: React.FC<TestimonialProps> = ({ quote, author, company, delay = 0 }) => (
-  <Card className={`border border-powble-darkGray shadow-md hover:shadow-lg transition-all duration-300 animate-reveal bg-powble-black`} style={{animationDelay: `${delay}ms`}}>
+  <Card className={`border border-powble-darkGray shadow-md hover:shadow-lg transition-all duration-300 animate-reveal bg-powble-black`} style={{ animationDelay: `${delay}ms` }}>
     <CardContent className="p-6">
       <p className="text-powble-white mb-6 italic">"{quote}"</p>
       <div className="font-semibold text-powble-white">{author}</div>
@@ -29,29 +31,62 @@ const Testimonials: React.FC = () => {
         <p className="text-powble-white text-center max-w-2xl mx-auto mb-12">
           See what our clients have to say about how Powble has transformed their power system design process.
         </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Testimonial
-            quote="Our design process shortened from 10 to 3 hours. Powble's AI tools have been a game changer for our workflow efficiency."
-            author="Sarah Johnson"
-            company="ElectraTech Systems"
-            delay={0}
-          />
-          
-          <Testimonial
-            quote="We can generate quotations and ticket responses easily, avoiding bottlenecks in our organization that used to slow us down."
-            author="Michael Chen"
-            company="PowerGrid Solutions"
-            delay={100}
-          />
-          
-          <Testimonial
-            quote="The component selection tool has saved us from costly mistakes. It's like having an expert engineer always available to consult."
-            author="David Rodriguez"
-            company="Integrate Energy"
-            delay={200}
-          />
+
+        <div className="w-full">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-1">
+              <CarouselItem className="pl-1 basis-full md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Testimonial
+                    quote="Review committees can be a pain, but Powble's AI tools have made it easier for us to review and approve designs."
+                    author="Andres Penaranda"
+                    company="SoftSolar"
+                    delay={0}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-1 basis-full md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Testimonial
+                    quote="Urgent quotation requests are a thing of the past. Powble's AI tools have made it easier for us to generate quotations and respond to urgent requests."
+                    author="Camilo Estrada"
+                    company="Green Energy"
+                    delay={100}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-1 basis-full md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Testimonial
+                    quote="The component selection tool has saved us from costly mistakes. It's like having an expert engineer always available to consult."
+                    author="Juan Perez"
+                    company="PowerGrid Solutions"
+                    delay={200}
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="pl-1 basis-full md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Testimonial
+                    quote="Report generation tools permit us to employ the time to assess measurements into customers and field tasks."
+                    author="Andrea Carrillo"
+                    company="PowerGrid Solutions"
+                    delay={200}
+                  />
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
+
       </div>
     </section>
   );
