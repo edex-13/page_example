@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { AlertCircle, Package, Ticket } from 'lucide-react';
+import { ClockArrowDown, Package, Ticket, BookCheck } from 'lucide-react';
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -10,11 +10,14 @@ interface FeatureCardProps {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => (
   <div className="bg-powble-black p-6 rounded-lg shadow-lg border border-powble-darkGray transition-all duration-300 hover:shadow-xl">
-    <div className="bg-powble-white text-powble-black p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-      {icon}
+    <div className="flex items-center justify-start mb-4 gap-4">
+      <div className="bg-powble-white text-powble-black p-3 rounded-full w-12 h-12 flex items-center justify-center">
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold mb-3 text-powble-white">{title}</h3>
     </div>
-    <h3 className="text-xl font-bold mb-3 text-powble-white">{title}</h3>
-    <p className="text-powble-darkGray">{description}</p>
+
+    <p className="text-powble-foreground text-sm">{description}</p>
   </div>
 );
 
@@ -25,24 +28,26 @@ const Features: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-powble-white">
           Access to Novel AI Tools
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <FeatureCard
-            icon={<AlertCircle size={24} />}
-            title="Fault Detection"
-            description="Advanced AI algorithms that help you detect faults in your designs before implementation, saving time and resources."
+            icon={<ClockArrowDown size={24} />}
+            title="Reduce Design Time"
+            description="Our AI tools help you reduce design time by fast design generation and optimization based on your requirements."
           />
-          
           <FeatureCard
             icon={<Ticket size={24} />}
             title="Ticket Response"
-            description="Automate and optimize your ticket response system with AI-powered solutions that reduce response time."
+            description="Automate and optimize your issues list with AI-powered solutions that reduce response time."
           />
-          
           <FeatureCard
             icon={<Package size={24} />}
             title="Component Selection"
             description="Get AI recommendations to select the right components for your power system projects based on requirements."
+          />
+          <FeatureCard
+            icon={<BookCheck size={24} />}
+            title="Automate Documents Generation"
+            description="Our AI tools help you generate documents for your power system projects based on your requirements, reducing the time and effort."
           />
         </div>
       </div>

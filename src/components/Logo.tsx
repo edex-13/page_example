@@ -1,13 +1,14 @@
 
 import React from 'react';
 
-const Logo: React.FC = () => {
+
+const Logo: React.FC<{ isScrolled: boolean }> = ({ isScrolled }) => {
+  
   return (
     <div className="flex items-center">
-      <div className="font-bold text-2xl text-powble-white">
-        <span>Pow</span>
-        <span className="text-powble-white bg-powble-darkGray px-1 rounded-sm">ble</span>
-        <span className="text-xs align-top">.com</span>
+      <div className={`cursor-pointer font-bold text-2xl flex flex-row items-center gap-2 ${isScrolled ? 'text-powble-white' : 'text-background'}`} onClick={()=>{window.location.href = '/'}}>
+        <img src="/icon.png" alt="Powble" width={40} height={40} className={`rounded-full ${!isScrolled ? 'invert' : ''}`} />
+        <span>Powble</span>
       </div>
     </div>
   );
