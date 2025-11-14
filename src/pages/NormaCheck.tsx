@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
-import HeroNormaCheck from '@/components/HeroNormaCheck';
-import FeaturesNormaCheck from '@/components/FeaturesNormaCheck.tsx';
+import HeroPowble from '@/components/HeroPowble';
+import FeaturesPowble from '@/components/FeaturesPowble.tsx';
 import Metrics from '@/components/Metrics';
 import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
 
-const NormaCheck: React.FC = () => {
+const Powble: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const elements = document.querySelectorAll('.animate-reveal');
@@ -33,12 +33,12 @@ const NormaCheck: React.FC = () => {
     <div className="min-h-screen bg-powble-black">
       <Navbar />
       <main>
-        <HeroNormaCheck/>
-        <FeaturesNormaCheck />
+        <HeroPowble/>
+        <FeaturesPowble />
       </main>
       <Footer />
     </div>
   );
 };
 
-export default NormaCheck;
+export default Powble;

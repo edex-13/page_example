@@ -5,8 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import NormaCheck from "./pages/NormaCheck";
-import UseCases from "./pages/useCases"
+import Powble from "./pages/NormaCheck";
+import UseCases from "./pages/UseCases"
 
 const queryClient = new QueryClient();
 
@@ -18,7 +18,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/NormaCheck" element={<NormaCheck />} />
+          <Route path="/Powble" element={<Powble />} />
           <Route path="/UseCases" element={<UseCases />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -57,7 +57,20 @@ export default {
 					black: '#FFFFFF',  // Inverted from black to white
 					white: '#000000',  // Inverted from white to black
 					darkGray: '#DDDDDD',  // Inverted from dark gray to light gray
-					lightGray: '#222222'  // Inverted from light gray to dark gray
+					lightGray: '#222222',  // Inverted from light gray to dark gray
+					// Color de acento profesional y sutil
+					accent: '#3B82F6',    // Azul eléctrico elegante
+					// Tonos intermedios para mejores contrastes
+					gray: {
+						'950': '#050505',     // Casi negro
+						'900': '#0F0F0F',     // Negro suave
+						'800': '#1A1A1A',     // Gris muy oscuro
+						'700': '#2A2A2A',     // Gris oscuro
+						'600': '#404040',     // Gris medio-oscuro
+						'500': '#737373',     // Gris medio
+						'400': '#A3A3A3',     // Gris claro-medio
+						'300': '#D4D4D4',     // Gris claro
+					}
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

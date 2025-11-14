@@ -2,13 +2,13 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { BadgeCheck } from 'lucide-react'
 
-const HeroNormaCheck: React.FC = () => {
+const HeroPowble: React.FC = () => {
   return (
     <section className="pt-60 pb-16 md:pt-60 md:pb-0 bg-foreground relative overflow-hidden sm:pb-0">
       <div className="container mx-auto px-1 md:px-2 relative z-10">
         <div className="max-w-4xl ml-10 text-start">
           <h1 className="text-5xl md:text-2xl font-bold mb-6 animate-reveal text-background underline">
-            NormaCheck 
+            Powble 
           </h1>
           <h2 className="text-5xl md:text-6xl font-bold mb-6 animate-reveal text-background">
             Fastest Project Analysis and Error detection
@@ -35,4 +35,4 @@ const HeroNormaCheck: React.FC = () => {
   );
 };
 
-export default HeroNormaCheck;
+export default HeroPowble;
